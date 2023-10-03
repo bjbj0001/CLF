@@ -1,5 +1,6 @@
 ---
-
+import Startcard from "../components/Startcard.astro";
+import Navigation from "../components/Navigation.astro"
 ---
 
 <html lang="en">
@@ -11,6 +12,12 @@
 		<title>Astro</title>
 	</head>
 	<body>
+		<Navigation />
 		<h1>Astro</h1>
+
+		<main>
+			<Startcard header="Hej Verden" text="Lorem ipsum" />
+			<Startcard header="Hej alle" text="Lorem ipsum" />
+		</main>
 	</body>
 </html>
