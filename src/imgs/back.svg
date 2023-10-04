@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780.61 466.41">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #8be3f8;
+      }
+
+      .cls-3 {
+        fill: #ccc64c;
+      }
+
+      .cls-4 {
+        fill: #d14991;
+      }
+
+      .cls-2 {
+        font-family: Transducer-ExtendedBlack, Transducer;
+        font-size: 38px;
+        font-weight: 800;
+        letter-spacing: .11em;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <g>
+        <path class="cls-4" d="m409.11,0v466.41L0,233.21,409.11.02v-.02Zm-15.43,439.84V26.57L31.15,233.21l362.52,206.63Z"/>
+        <path class="cls-3" d="m382.27,44.45v377.53S51.15,233.21,51.15,233.21L382.3,44.45h-.02Zm-15.43,350.97V71.01L82.3,233.21l284.54,162.2Z"/>
+        <path class="cls-3" d="m357.05,91.63v283.17L108.69,233.21l248.38-141.59h-.02Zm-15.43,256.61V118.19l-201.78,115.02,201.78,115.02Z"/>
+        <path class="cls-1" d="m328.83,138.28v189.87l-166.54-94.93,166.54-94.93Zm-15.43,163.33v-136.76l-119.96,68.37,119.96,68.39Z"/>
+        <path class="cls-1" d="m301.85,181.98v102.47l-89.89-51.24,89.89-51.24Zm-15.43,75.93v-49.36l-43.3,24.67,43.3,24.69Z"/>
+      </g>
+      <path class="cls-4" d="m394.05,176.6v110h386.56v-110h-386.56Zm374.54,98h-359.97v-85h359.97v85Z"/>
+      <text class="cls-2" transform="translate(512.59 243.09) scale(.93 1)"><tspan x="0" y="0">BACK</tspan></text>
+    </g>
+  </g>
+</svg>
