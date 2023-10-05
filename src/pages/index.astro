@@ -1,24 +1,27 @@
 ---
 import Startcard from "../components/Startcard.astro";
-import Navigation from "../components/Navigation.astro"
+import Layout from "../layouts/Layout.astro"
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<Navigation />
-		<h1>Astro</h1>
+<Layout>
+	<!-- her starter layouts <slot> -->
+	<div class="front">
+		<p>Video her</p>
+		<h1>ANIMERET OVERSKRIFT (SKULLE NOK VÆRE EN COMPONENT)</h1>
+		<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia aut assumenda, nulla voluptas nesciunt consequuntur dignissimos eaque vero fugit sunt dolorem quia ea esse beatae sapiente, dicta quasi earum at.</p>
+		<div class="exhibits_grid">
+			<Startcard header="Hej Verden" text="Lorem ipsum" picture="/udstilling.jpeg"/>
+			<Startcard header="Hej Verden" text="Lorem ipsum" picture="/udstilling.jpeg"/>
+			<Startcard header="Hej Verden" text="Lorem ipsum" picture="/udstilling.jpeg"/>
+			<Startcard header="Hej Verden" text="Lorem ipsum" picture="/udstilling.jpeg"/>
+			<Startcard header="Hej Verden" text="Lorem ipsum" picture="/udstilling.jpeg"/>
+			<Startcard header="Hej Verden" text="Lorem ipsum" picture="/udstilling.jpeg"/>
+	</div>
+		</div>
+		<!-- her slutter layouts <slot> -->
+</Layout>			
+		
+<style>
 
-		<main>
-			<Startcard header="Hej Verden" text="Lorem ipsum" />
-			<img src="/udstilling.jpeg" alt="Udstilling1">
-		</Startcard>
-		</main>
-	</body>
-</html>
+
+</style>

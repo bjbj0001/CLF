@@ -1,0 +1,17 @@
+img {
+  max-width: 100%;
+}
+
+.exhibits_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-row: 1fr 1fr;
+  grid-template-rows: 200px 200px;
+}
+.exhibits_grid article:nth-child(2) {
+  grid-column: span 2;
+}
+
+.exhibits_grid article:nth-child(3) {
+  grid-row: span 2;
+}
