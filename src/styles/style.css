@@ -19,15 +19,15 @@ h1 {
   font-family: "transducer-extended", sans-serif;
   font-weight: 900;
   font-style: normal;
-  font-size: 3cqw;
+  font-size: 4cqw;
   color: white;
 }
 
 h2 {
-  font-family: "transducer-extended", sans-serif;
+  font-family: "transducer", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 1cqw;
+  font-size: 2cqw;
   color: white;
 }
 
@@ -51,6 +51,40 @@ h2 {
 
 /**FORSIDE PLACEMENT**/
 /**SOME PLACEMENT**/
+
+@media (max-width: 700px) {
+  #some_grid {
+    position: fixed;
+    right: 2%;
+    top: 40%;
+  }
+}
 #some_grid {
   position: fixed;
+  right: 2%;
+  top: 40%;
+}
+
+/***PROGRAM OVER AND TEXT***/
+
+@media (max-width: 700px) {
+  #for_text_div {
+    display: flex;
+    justify-content: center;
+  }
+
+  #for_text {
+    width: 80%;
+    text-align: center;
+  }
+}
+
+#for_text_div {
+  display: flex;
+  justify-content: center;
+}
+
+#for_text {
+  width: 80%;
+  text-align: center;
 }
