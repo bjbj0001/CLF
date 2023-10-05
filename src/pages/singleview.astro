@@ -1,0 +1,23 @@
+	---
+const response = await fetch("...");
+const data = await response.json();
+ 
+import { Debug } from "astro/components";
+import MainLayout from "../layouts/MainLayout.astro";
+import Card from "../components/Card.astro";
+---
+ 
+<MainLayout title="Mapping">
+  <Debug {data} />
+ 
+  <h2>Mapping</h2>
+  {
+    data.map((product) => {
+      return (
+        <Card header={product.title}>
+          <img src={product.image} alt="" />
+        </Card>
+      );
+    })
+  }
+</MainLayout>
