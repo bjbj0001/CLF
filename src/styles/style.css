@@ -89,9 +89,20 @@ h2 {
   text-align: center;
 }
 /*****PROGRAM BTN***/
+#program_knap a {
+  text-decoration: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding-left: 50%;
+  gap: 2%;
+  /**JUSTER HER PADDING TOP**/
+}
+
 #program_knap img {
-  width: 10%;
+  width: 30%;
+  grid-column: 2;
 }
 #program_knap_text {
-  text-decoration: none;
+  grid-column: 1;
 }
