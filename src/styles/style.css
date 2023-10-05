@@ -65,8 +65,8 @@ h2 {
   top: 40%;
 }
 
-/***PROGRAM OVER AND TEXT***/
-
+/***PROGRAM PÅ FORSIDEN ***/
+/***PROGRAM OVER***/
 @media (max-width: 700px) {
   #for_text_div {
     display: flex;
@@ -78,7 +78,7 @@ h2 {
     text-align: center;
   }
 }
-
+/****PROGRAM TEXT*****/
 #for_text_div {
   display: flex;
   justify-content: center;
@@ -87,4 +87,11 @@ h2 {
 #for_text {
   width: 80%;
   text-align: center;
+}
+/*****PROGRAM BTN***/
+#program_knap img {
+  width: 10%;
+}
+#program_knap_text {
+  text-decoration: none;
 }
