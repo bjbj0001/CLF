@@ -50,5 +50,7 @@ h2 {
 }
 
 /**FORSIDE PLACEMENT**/
-
 /**SOME PLACEMENT**/
+#some_grid {
+  position: fixed;
+}
