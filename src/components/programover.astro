@@ -1,0 +1,45 @@
+ ---
+ ---
+
+ <div class="program">
+        <div class="track">
+            <div> &nbsp; PROGRAM &nbsp; PROGRAM &nbsp; PROGRAM &nbsp; PROGRAM &nbsp; PROGRAM &nbsp; PROGRAM&nbsp;
+                PROGRAM &nbsp; PROGRAM &nbsp; PROGRAM
+            </div>
+        </div>
+    </div>
+
+
+
+
+    
+    <style>
+.program {
+  position: relative;
+  width: 100vw;
+  max-width: 100%;
+  height: 40px;
+  overflow-x: hidden;
+  color: white;
+  font-size: 2rem;
+  font-family: "transducer-extended", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.track {
+  position: absolute;
+  white-space: nowrap;
+  will-change: transform;
+  animation: program 20s linear infinite;
+}
+
+@keyframes program {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+</style>
