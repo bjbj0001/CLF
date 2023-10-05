@@ -12,3 +12,17 @@ body {
   position: relative;
   background-color: #000000;
 }
+
+h1 {
+  font-family: "transducer-extended", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 3cqw;
+}
+
+h2 {
+  font-family: "transducer-extended", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1cqw;
+}
