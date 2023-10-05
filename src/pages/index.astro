@@ -1,6 +1,8 @@
 ---
 import Startcard from "../components/Startcard.astro";
-import Navigation from "../components/Navigation.astro"
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+
 ---
 
 <html lang="en">
@@ -9,6 +11,8 @@ import Navigation from "../components/Navigation.astro"
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+				<link rel="stylesheet" href="/src/styles/style.css">
+
 		<title>Astro</title>
 	</head>
 	<body>
@@ -19,10 +23,9 @@ import Navigation from "../components/Navigation.astro"
 			<Startcard header="Hej Verden" text="Lorem ipsum" />
 			<Startcard header="Hej alle" text="Lorem ipsum" />
 		</main>
-
-		<footer>
-			
-		</footer>
+<footer>
+				<Footer />
+</footer>
 
 	</body>
 </html>
