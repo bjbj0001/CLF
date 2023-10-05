@@ -1,0 +1,126 @@
+---
+
+---
+
+
+<footer>
+
+     <!--------------Billedet-------
+<div class="billede">
+  <img src="/src/imgs/hvidby.svg" alt="footerby"> 
+</div>
+--------------------------->
+
+<div class="footerindhold">
+   <a href="/#">Program</a>
+    <a href="/#">info@copenhagenlightfestival.org</a>
+   <a href="/#">Subscribe to newsletter</a>
+    <a href="/#">About Us</a>
+    <a href="/#">+45 25 55 66 04</a>
+
+<div class="signup">
+  <form target="#">
+    <input type="email" id="email-signup" placeholder="Enter your email.." required>
+    <input type="submit" value="Subscribe" id="btn">
+  </form>
+</div>
+
+</div> 
+
+<div class="bund">
+    <p>@copenhagenlightfestival</p>
+</div>
+
+</footer>
+
+<!---------------------STYLESHEET-------------------->
+<style>
+
+
+
+/*********************** img 
+.billede {
+       margin-bottom: 0%;
+}
+.billede img{
+    display: flex;
+    position: absolute;
+    align-items: flex-end;
+}
+*************************/
+
+/*********************** teksten ************************'*/
+.footerindhold {
+font-family: transducer;
+position:relative;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 1fr 1fr;
+margin-left: 6%;
+margin-right: 6%;
+align-items: start;
+margin-top: 50%;
+}
+
+.footerindhold a {
+   color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1.7cqw;
+    text-align: center;
+}
+
+.bund{
+font-family: transducer;
+position:relative;
+margin-top: 10%; 
+display: flex;
+  justify-content: center;
+
+}
+
+.bund p{
+     color: white;
+     text-transform: uppercase;
+       text-decoration: none;
+         font-size: 2cqw;
+}
+
+/*********************** email ************************'*/
+form{
+    margin-top:1% ;
+    display: flex;
+    align-items: center;
+    margin-left: 10%;
+
+}
+input{
+   font-family: transducer; 
+   font-size: 1cqw;
+}
+
+#btn{
+    width: 40px;
+    height: 15px;
+background-color: #CEC82B;  
+border:none;
+  float:right;
+    padding:0px 5px 0px 3px;
+  color:white;
+}
+
+#btn:hover{
+  background-color:#FF00AE;
+}
+
+#email-signup{
+        width: 80px;
+  height:15px;
+  padding:0px 5px 0px 5px;
+  background-color:white;
+  color:#383838;
+  border:none;
+}
+
+
+</style>
