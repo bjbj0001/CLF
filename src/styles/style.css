@@ -73,6 +73,16 @@ h2 {
   grid-column: span 2;
 }
 
+.exhibits_grid article:nth-child(7) {
+  grid-column: span 2;
+}
+.exhibits_grid article:nth-child(8) {
+  grid-row: span 2;
+}
+.exhibits_grid article:nth-child(9) {
+  grid-column: span 2;
+}
+
 /**SOME PLACEMENT**/
 #some_grid {
   position: fixed;
