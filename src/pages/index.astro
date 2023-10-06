@@ -34,19 +34,17 @@ import { Debug } from "astro/components";
 			<div id="for_text_div">
 				<h2 id="for_text">Copenhagen Light Festival is an annual light festival that transforms the quiet and cold winter darkness into a unique celebration of light art, lighting design and illumination in the center of Copenhagen. </h2>
 			</div>
-			
-        <div class="front">
-            <p>Video here</p>
-     
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia aut assumenda, nulla voluptas nesciunt consequuntur dignissimos eaque vero fugit sunt dolorem quia ea esse beatae sapiente, dicta quasi earum at.</p>
-            <!-- Create a grid container for your gallery -->
-               <div class="exhibits_grid">
-			<Startcard header="Hej Verden" text="Lorem ipsum" picture="/udstilling.jpeg"/>
-			<Startcard header="Hej Verden" text="Lorem ipsum" picture="/udstilling.jpeg"/>
-			<Startcard header="Hej Verden" text="Lorem ipsum" picture="/udstilling.jpeg"/>
-			<Startcard header="Hej Verden" text="Lorem ipsum" picture="/udstilling.jpeg"/>
-			<Startcard header="Hej Verden" text="Lorem ipsum" picture="/udstilling.jpeg"/>
-        </div>
+       <div class="exhibits_grid">
+            {
+    data.map((product) => {
+      return (
+      
+			<Startcard header={product.artist}  text="Lorem ipsum" picture={product.image}/>
+       
+      )
+    })
+  }    
+  </div>
 			<div id="program_knap">
 				<a href="listeview.astro"> 
 					<h1 id="program_knap_text">PROGRAM</h1>
@@ -69,4 +67,5 @@ import { Debug } from "astro/components";
     display: none;
   }
 }</style>
+
 
