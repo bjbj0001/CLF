@@ -2,191 +2,198 @@
 
 ---
 <script>
-    var burgerMenu = document.getElementById("burger-menu");
+  var burgerMenu = document.getElementById("burger-menu");
 
 var overlay = document.getElementById("menu");
 
 burgerMenu.addEventListener("click", function () {
-  this.classList.toggle("close");
-  overlay.classList.toggle("overlay");
+this.classList.toggle("close");
+overlay.classList.toggle("overlay");
 });
 </script>
 
-    <nav>
+  <nav>
 <div class="logo">
-       <a href="index.astro"></a> <img src="../../src/imgs/Asset 18@400x.png" alt="img">
-        </div>
-        <div id="burger-menu">
-            <span></span>
-        </div>
+<a href="index.astro"> <img src="../../src/imgs/asset@400x.png" alt="img"></a>
+      </div>
+      <div id="burger-menu">
+          <span></span>
+      </div>
 
-        <div id="menu">
-            <ul>
-                <li><a class="sider" href="program.html">Opportunities</a></li>
-                <li><a class="sider" href="kobbillet.html">Program</a></li>
-                <li><a class="sider" href="blivfrivillig.html">About us</a></li>
-            </ul>
-        </div> 
-    </nav>
+      <div id="menu">
+          <ul>
+              <li><a class="sider" href="../pages/singleview.astro">Opportunities</a></li>
+              <li><a class="sider" href="kobbillet.html">Program</a></li>
+              <li><a class="sider" href="blivfrivillig.html">About us</a></li>
+          
 
-    <style>
+          </ul>
+
+      </div>
+     
+  </nav>
+
+
+  <style>
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
 
 .logo img {
-  width: 80px;
-  height: 80px;
+width: 80px;
+height: 80px;
 }
 .logo{
 display: inline-block;
-  width: 750px;
+width: 600px;
 }
 nav {
 
-    display: flex;
-   
-    justify-content: flex-end;
-   
-    align-items: center;
-    padding: 3%;
+  display: flex;
+ 
+  justify-content: flex-end;
+ 
+  align-items: center;
+ padding: 3%;
 }
 
 #burger-menu {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 #menu ul {
-    list-style: none;
-   display: flex;
-    
+  list-style: none;
+ display: flex;
+  
 }
 
 #menu li {
-    margin-right: 50px; 
+  margin-right: 50px; 
 }
 
 #menu a {
-    text-decoration: none;
-    color: #333; 
-    font-weight: bold;
-    font-size: 2rem;
+  text-decoration: none;
+ 
 }
 
 #menu a:hover {
-    color: #007bff; 
+  color: #ff00ae; 
 }
 
 @media only screen and (max-width: 800px) {
 
- 
-#burger-menu {
-  cursor: pointer;
-  height: 27px; 
-  width: 27px;
-  margin: 30px;
-  overflow: visible;
-  position: absolute;
-  z-index: 2;
-  top: 0;
-  right: 0;
-}
 
+#burger-menu {
+cursor: pointer;
+height: 27px; 
+width: 27px;
+margin: 30px;
+overflow: visible;
+position: absolute;
+z-index: 2;
+top: 0;
+right: 0;
+}
+nav {
+
+
+padding: 0;
+}
 
 #burger-menu span {
-  display: block;
-  height: 8px;
-  opacity: 1;
-  position: absolute;
-  transition: 0.3s ease-in-out;
+display: block;
+height: 8px;
+opacity: 1;
+position: absolute;
+transition: 0.3s ease-in-out;
 }
 #burger-menu span::before {
-  display: block;
-  height: 40px;
-  opacity: 1;
-  position: absolute;
-  transition: 0.3s ease-in-out;
+display: block;
+height: 40px;
+opacity: 1;
+position: absolute;
+transition: 0.3s ease-in-out;
 }
 
 #burger-menu span:before,
 #burger-menu span:after {
-  content: "";
+content: "";
 }
 
 #burger-menu span:before {
-    left: 17px;
-    top: -15px;
-    width: 7px;
-    background: #f8f2b1;
+  left: 15.5px;
+  top: -16px;
+  width: 7px;
+  background: #ff00ae;
 }
 
 #burger-menu span {
-    right: -16px;
-    top: 3px;
-    width: 37px;
-    background: #f8f2b1;
+  right: -16px;
+  top: 3px;
+  width: 37px;
+  background: #ff00ae;
 }
 
 
 
 #burger-menu.close span:before {
-    top: -16px;
-    transform: rotate(-0deg);
-    width: 8px;
-    background: rgb(0,0,0);
-  }
+  top: -16px;
+  transform: rotate(-0deg);
+  width: 8px;
+  background: rgb(0,0,0);
+}
 
 
 #burger-menu.close span {
-    transform: rotate(-45deg);
-    top: 8px;
-    width: 42px;
-    background: rgb(0,0,0);
+  transform: rotate(-45deg);
+  top: 8px;
+  width: 40px;
+  background: rgb(0,0,0);
 }
 
 
 
 #menu {
-  z-index: 1;
-  min-width: 100%;
-  min-height: 100%;
-  position: fixed;
-  top: 0;
-  height: 0;
-  visibility: hidden;
-  opacity: 0;
-  text-align: center;
-  padding-top: 20px;
-  transition: all 0.3s ease-in-out;
+z-index: 1;
+min-width: 100%;
+min-height: 100%;
+position: fixed;
+top: 0;
+height: 0;
+visibility: hidden;
+opacity: 0;
+text-align: center;
+padding-top: 20px;
+transition: all 0.3s ease-in-out;
 }
 
 #menu.overlay {
-  visibility: visible;
-  opacity: 1;
-  padding-top: 100px;
-  background: #f8f2b1;
+visibility: visible;
+opacity: 1;
+padding-top: 100px;
+background: #ff00ae;
 }
 
 #menu ul {
-  padding: 0;
-  flex-direction: column;
+padding: 0;
+flex-direction: column;
 }
 
 #menu li {
-  list-style: none;
-  font-family: "GT-Haptik-Regular";
-  margin-right: 0; 
-    margin-bottom: 10px; 
+list-style: none;
+font-family: "GT-Haptik-Regular";
+margin-right: 0; 
+  margin-bottom: 10px; 
 }
 
 #menu a {
-  color: #000;
-  display: block;
-  font-size: 30px;
-  margin-bottom: 30px;
-  text-decoration: none;
+color: #000;
+display: block;
+font-size: 30px;
+margin-bottom: 30px;
+text-decoration: none;
 }
 }
-    </style>
+  </style>
