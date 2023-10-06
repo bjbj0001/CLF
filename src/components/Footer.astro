@@ -10,7 +10,9 @@
   <img src="/src/imgs/hvidby.svg" alt="footerby"> 
 </div>
 --------------------------->
-
+<div class="billede">
+  <img src="/src/imgs/footerby.svg" alt="footerby"> 
+</div>
 <div class="footerindhold">
    <a href="/#">Program</a>
     <a href="/#">info@copenhagenlightfestival.org</a>
@@ -51,6 +53,12 @@
 }
 *************************/
 
+
+/*********************** bybillede ************************'*/
+
+.billede {
+       margin-top: 20%;
+}
 /*********************** teksten ************************'*/
 .footerindhold {
 font-family: transducer;
@@ -61,7 +69,7 @@ grid-template-rows: 1fr 1fr;
 margin-left: 6%;
 margin-right: 6%;
 align-items: start;
-margin-top: 25%;
+margin-top: 10%;
 }
 
 .footerindhold a {
@@ -101,6 +109,7 @@ input{
    font-size: 1cqw;
 }
 
+/*********************** knap *************************/
 #btn{
     width: 40px;
     height: 15px;
@@ -122,6 +131,30 @@ input{
   background-color:white;
   color:#383838;
   border:none;
+}
+
+@media only screen and (min-width: 800px) {
+  #btn{
+    width: 90px;
+    height: 25px;
+    background-color: #CEC82B;  
+    border:none;
+    float:right;
+    padding:0px 5px 0px 3px;
+    color:white;
+}
+#btn:hover{
+  background-color:#FF00AE;
+}
+
+#email-signup{
+  width: 160px;
+  height:25px;
+  padding:0px 5px 0px 5px;
+  background-color:white;
+  color:#383838;
+  border:none;
+}
 }
 
 
