@@ -2,14 +2,27 @@
 import Some from "../components/Some.astro";
 import Mainlayout from "../layout/Mainlayout.astro";
 import Programover from "../components/Programover.astro";
+import Startcard from "../components/Startcard.astro";
 
 
 ---
 
 <Mainlayout>
-		<main>
-			<Some/>
-			<Programover/>
-			
-		</main>
-	</Mainlayout>
+    <main>
+        <Some />
+        <div class="front">
+            <p>Video here</p>
+            <Programover />
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia aut assumenda, nulla voluptas nesciunt consequuntur dignissimos eaque vero fugit sunt dolorem quia ea esse beatae sapiente, dicta quasi earum at.</p>
+            <!-- Create a grid container for your gallery -->
+               <div class="exhibits_grid">
+			<Startcard header="Hej Verden" text="Lorem ipsum" picture="/udstilling.jpeg"/>
+			<Startcard header="Hej Verden" text="Lorem ipsum" picture="/udstilling.jpeg"/>
+			<Startcard header="Hej Verden" text="Lorem ipsum" picture="/udstilling.jpeg"/>
+			<Startcard header="Hej Verden" text="Lorem ipsum" picture="/udstilling.jpeg"/>
+			<Startcard header="Hej Verden" text="Lorem ipsum" picture="/udstilling.jpeg"/>
+        </div>
+    </main>
+</Mainlayout>
+
+<style>

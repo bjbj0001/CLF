@@ -1,12 +1,23 @@
 ---
 const header = Astro.props.header;
 const text = Astro.props.text;
+const picture = Astro.props.picture;
 ---
 
 <article>
+	<div class="imgwrapper"><img src={picture} alt=""></div>
 		<h2>{header}</h2>
 		<p> {text} </p>
-		<button>Klik her</button>
 </article>
 
-    <style></style>
+    <style>
+		.imgwrapper {
+			height: 100%;
+		}
+		img {
+			height: 100%;
+ 
+  object-fit: cover;
+  
+}
+	</style>
