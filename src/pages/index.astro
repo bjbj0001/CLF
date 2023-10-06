@@ -2,24 +2,40 @@
 import Some from "../components/Some.astro";
 import Mainlayout from "../layout/Mainlayout.astro";
 import Programover from "../components/Programover.astro";
+import Startcard from "../components/Startcard.astro";
 
 
 ---
 
 <Mainlayout>
-		<main>
+<main>
 			<Some/>
 			<Programover/>
 			<div id="for_text_div">
 				<h2 id="for_text">Copenhagen Light Festival is an annual light festival that transforms the quiet and cold winter darkness into a unique celebration of light art, lighting design and illumination in the center of Copenhagen. </h2>
 			</div>
 
+        <Some />
+        <div class="front">
+            <p>Video here</p>
+            <Programover />
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia aut assumenda, nulla voluptas nesciunt consequuntur dignissimos eaque vero fugit sunt dolorem quia ea esse beatae sapiente, dicta quasi earum at.</p>
+            <!-- Create a grid container for your gallery -->
+               <div class="exhibits_grid">
+			<Startcard header="Hej Verden" text="Lorem ipsum" picture="/udstilling.jpeg"/>
+			<Startcard header="Hej Verden" text="Lorem ipsum" picture="/udstilling.jpeg"/>
+			<Startcard header="Hej Verden" text="Lorem ipsum" picture="/udstilling.jpeg"/>
+			<Startcard header="Hej Verden" text="Lorem ipsum" picture="/udstilling.jpeg"/>
+			<Startcard header="Hej Verden" text="Lorem ipsum" picture="/udstilling.jpeg"/>
+        </div>
 			<div id="program_knap">
 				<a href="listeview.astro"> 
 					<h1 id="program_knap_text">PROGRAM</h1>
 					<img src="../../src/imgs/forward_btn.svg" alt="programknap">
 				</a>
 			</div>
+    </main>
+</Mainlayout>
 
-		</main>
-	</Mainlayout>
+<style>
+
