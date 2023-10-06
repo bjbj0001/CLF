@@ -74,18 +74,17 @@ h2 {
 }
 
 /**SOME PLACEMENT**/
-
+#some_grid {
+  position: fixed;
+  right: 2%;
+  top: 67%;
+  z-index: 1000;
+}
 @media (max-width: 700px) {
   #some_grid {
     position: fixed;
     right: 2%;
-    top: 40%;
   }
-}
-#some_grid {
-  position: fixed;
-  right: 2%;
-  top: 40%;
 }
 
 /***PROGRAM PÅ FORSIDEN ***/
