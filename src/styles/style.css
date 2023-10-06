@@ -88,13 +88,26 @@ h2 {
 }
 
 /***PROGRAM PÅ FORSIDEN ***/
-/***PROGRAM OVER TOM***/
-
+/***PROGRAM OVER OBS TOM***/
+.program {
+  margin-top: 7%;
+}
 /****PROGRAM TEXT*****/
+#for_text_div {
+  display: flex;
+  justify-content: center;
+  margin-top: 3%;
+}
+
+#for_text {
+  width: 80%;
+  text-align: center;
+}
 @media (max-width: 700px) {
   #for_text_div {
     display: flex;
     justify-content: center;
+    margin-top: 1%;
   }
 
   #for_text {
@@ -103,28 +116,19 @@ h2 {
   }
 }
 
-#for_text_div {
-  display: flex;
-  justify-content: center;
-}
-
-#for_text {
-  width: 80%;
-  text-align: center;
-}
 /*****PROGRAM BTN***/
 #program_knap a {
   text-decoration: none;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  padding-left: 50%;
-  gap: 2%;
-  /**JUSTER HER PADDING TOP**/
+  padding-left: 48%;
+  gap: 3%;
+  margin-top: 15%;
 }
 
 #program_knap img {
-  width: 30%;
+  width: 76%;
   grid-column: 2;
 }
 #program_knap_text {
