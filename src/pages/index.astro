@@ -6,10 +6,16 @@ import Startcard from "../components/Startcard.astro";
 
 
 ---
-
+        <video width="100%" height="100%" id="videoweb" width="320" height="240" autoplay muted loop>
+            <source src="http://www.eddasolj.dk/kea2/07_web/video/lightfestival(16x9).mp4" type="video/mp4">
+        </video>
+        <video width="100%" height="100%" id="videmobil" width="320" height="240" autoplay muted loop>
+            <source src="http://www.eddasolj.dk/kea2/07_web/video/lightfestival (9x16).mp4" type="video/mp4">
+        </video>
 <Mainlayout>
 <main>
 			<Some/>
+	
 			<Programover/>
 			<div id="for_text_div">
 				<h2 id="for_text">Copenhagen Light Festival is an annual light festival that transforms the quiet and cold winter darkness into a unique celebration of light art, lighting design and illumination in the center of Copenhagen. </h2>
@@ -36,5 +42,17 @@ import Startcard from "../components/Startcard.astro";
     </main>
 </Mainlayout>
 
-<style>
+
+
+	<style>
+	@media (max-width: 800px) {
+  #videoweb {
+    display: none;
+  }
+}
+@media (min-width: 800px) {
+  #videmobil {
+    display: none;
+  }
+}</style>
 
