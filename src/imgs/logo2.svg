@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 272.44 243.17">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2 {
+        font-size: 22.74px;
+      }
+
+      .cls-3 {
+        clip-path: url(#clippath);
+      }
+
+      .cls-4 {
+        letter-spacing: -.06em;
+      }
+
+      .cls-5, .cls-6 {
+        font-family: TransducerVF-BlackExtended, 'Transducer VF';
+        font-variation-settings: 'wght' 900, 'wdth' 200, 'slnt' 0;
+        font-weight: 800;
+      }
+
+      .cls-7 {
+        font-family: HiraKakuStd-W8-83pv-RKSJ-H, 'Hiragino Kaku Gothic Std';
+      }
+
+      .cls-8 {
+        fill: #6be7fc;
+      }
+
+      .cls-8, .cls-9, .cls-10 {
+        stroke-width: 0px;
+      }
+
+      .cls-9 {
+        fill: #e43a94;
+      }
+
+      .cls-10 {
+        fill: #cec72a;
+      }
+
+      .cls-6 {
+        letter-spacing: -.11em;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+    <clipPath id="clippath">
+      <text class="cls-1" transform="translate(0 203.4)"><tspan class="cls-5"><tspan x="0" y="0" xml:space="preserve"> COPENH</tspan><tspan class="cls-4" x="144.69" y="0">A</tspan><tspan x="165.84" y="0">GEN</tspan></tspan><tspan class="cls-5" x="0" y="27.29">LIGHT</tspan><tspan class="cls-7" x="94.59" y="27.29"> </tspan><tspan class="cls-5" x="102.16" y="27.29">FESTI</tspan><tspan class="cls-6" x="191.97" y="27.29">V</tspan><tspan class="cls-5" x="211.99" y="27.29" xml:space="preserve">AL  </tspan></text>
+    </clipPath>
+  </defs>
+  <g id="Layer_2-2" data-name="Layer 2">
+    <path class="cls-9" d="m212.33,177.41H30.22c-6.78,0-11.04-7.33-7.68-13.22L113.84,4.03c3.07-5.38,10.82-5.38,13.89,0l91.79,161.02c3.14,5.51-.84,12.35-7.18,12.35Zm-185.28-7h187.45L120.78,5.99,27.05,170.41Z"/>
+    <path class="cls-10" d="m206.4,165.25H35.16L120.78,15.05l85.62,150.2Zm-159.19-7h147.14L120.78,29.18,47.21,158.25Z"/>
+    <path class="cls-10" d="m185,153.81H56.56S120.78,41.15,120.78,41.15l64.22,112.66Zm-116.39-7h104.34s-52.17-91.52-52.17-91.52l-52.17,91.52Z"/>
+    <path class="cls-8" d="m163.84,141h-86.12l43.06-75.54,43.06,75.54Zm-74.08-7h62.03l-31.01-54.41-31.02,54.41Z"/>
+    <path class="cls-8" d="m144.02,128.76h-46.48l23.24-40.77,23.24,40.77Zm-34.44-7h22.39l-11.19-19.64-11.2,19.64Z"/>
+    <g>
+      <text class="cls-2" transform="translate(.04 203.41)"><tspan class="cls-5"><tspan x="0" y="0" xml:space="preserve"> COPENH</tspan><tspan class="cls-4" x="144.69" y="0">A</tspan><tspan x="165.84" y="0">GEN</tspan></tspan><tspan class="cls-5" x="0" y="27.29">LIGHT</tspan><tspan class="cls-7" x="94.59" y="27.29"> </tspan><tspan class="cls-5" x="102.16" y="27.29">FESTI</tspan><tspan class="cls-6" x="191.97" y="27.29">V</tspan><tspan class="cls-5" x="211.99" y="27.29">AL</tspan></text>
+      <g class="cls-3">
+        <polygon class="cls-9" points="219.25 186.08 219.25 187.46 87 232.76 .08 232.76 1.25 212.89 219.25 186.08"/>
+      </g>
+    </g>
+  </g>
+</svg>
