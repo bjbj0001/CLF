@@ -125,7 +125,9 @@ h3 {
   #for_text_div {
     display: flex;
     justify-content: center;
-    margin-top: 1%;
+    margin-top: 3%;
+    margin-left: 10%;
+    margin-right: 10%;
   }
 
   #for_text {
