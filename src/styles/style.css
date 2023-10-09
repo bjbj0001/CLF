@@ -155,3 +155,14 @@ h3 {
 #program_knap_text {
   grid-column: 1;
 }
+
+/***LISTE VIEW PROGRAM OVER******/
+.luft {
+  height: 100px;
+}
+
+@media (max-width: 700px) {
+  .luft {
+    height: 80px;
+  }
+}
