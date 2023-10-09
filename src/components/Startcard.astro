@@ -3,24 +3,53 @@ const header = Astro.props.header;
 const text = Astro.props.text;
 const picture = Astro.props.picture;
 ---
+
 <article>
-	<div class="imgwrapper"><img src={picture} alt=""></div>
-		<h2> {header} </h2>
-		<p> {text} </p>
+  <div class="imgwrapper">
+    <img src={picture} alt="">
+    <div class="text-overlay">
+		<h3>{text}</p>
+      <h2>{header}</h2>
+    </div>
+  </div>
 </article>
 
-    <style>
-		.imgwrapper {
-			height: 100%;
-		}
-		img {
-			height: 100%;
- 
-  object-fit: cover;
+<style>
+  .imgwrapper {
+    position: relative; /* Ensure the image wrapper is a positioned container */
+    height: 100%;
+  }
   
-}
+  img {
+    height: 100%;
+    object-fit: cover;
+  }
 
-h2 {
-	z-index: 100;
-}
-	</style>
+  .text-overlay {
+    position: absolute; /* Position the text overlay */
+    top: 90; /* Align it to the top of the image */
+    /* left: 0; /* Align it to the left of the image */
+    /* right: 0; /* Stretch it to cover the entire width of the image */
+    bottom: 0; /* Stretch it to cover the entire height of the image */
+    color: white; /* Text color */
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: left;
+    padding: 20px; /* Add some padding for readability */
+  }
+
+  h2, h3 {
+    margin: 0; /* Remove default margin */
+   /* text-align: center; /* Center align text within the overlay */
+  }
+
+  h3 {
+	font-size: 0.8rem;
+  }
+    h2 {
+	font-size: 1.2rem;
+  }
+
+  
+</style>
