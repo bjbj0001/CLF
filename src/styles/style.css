@@ -111,6 +111,7 @@ h3 {
   #some_grid {
     position: fixed;
     right: 2%;
+    top: 75%;
   }
 }
 
