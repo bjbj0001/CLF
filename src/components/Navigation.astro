@@ -14,7 +14,7 @@ overlay.classList.toggle("overlay");
 
   <nav>
 <div class="logo">
-<a href="index.astro"> <img src="../../src/imgs/asset@400x.png" alt="img"></a>
+<a href="../pages/index"> <img src="../../src/imgs/logo2.svg" alt="img"></a>
       </div>
       <div id="burger-menu">
           <span></span>
@@ -42,12 +42,13 @@ box-sizing: border-box;
 }
 
 .logo img {
-width: 80px;
-height: 80px;
+width: 130px;
+height: 130px;
 }
 .logo{
 display: inline-block;
-width: 500px;
+width: 640px;
+padding: 3%;
 }
 nav {
 
@@ -85,7 +86,10 @@ nav {
 }
 
 @media only screen and (max-width: 800px) {
-
+  .logo img {
+width: 80px;
+height: 80px;
+}
 
 #burger-menu {
 cursor: pointer;

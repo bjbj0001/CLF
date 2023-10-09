@@ -1,199 +1,189 @@
 ---
-
 ---
-<script>
-    var burgerMenu = document.getElementById("burger-menu");
 
-var overlay = document.getElementById("menu");
 
-burgerMenu.addEventListener("click", function () {
-  this.classList.toggle("close");
-  overlay.classList.toggle("overlay");
-});
-</script>
-
-    <nav>
-<div class="logo">
-  <a href="index.astro"> <img src="../../src/imgs/asset@400x.png" alt="img"></a>
-        </div>
-        <div id="burger-menu">
-            <span></span>
-        </div>
-
-        <div id="menu">
-            <ul>
-                <li><a class="sider" href="../pages/singleview.astro">Opportunities</a></li>
-                <li><a class="sider" href="kobbillet.html">Program</a></li>
-                <li><a class="sider" href="blivfrivillig.html">About us</a></li>
+<main>
+    <div class="grid_123">
+        <div class="grid_12">
+    <img src="../../src/imgs/asset@400x.png" alt="img1">
+<div>
+        <h2>Jan Kuck (DE)</h2>
+         <p>The installation consists of a glowing carpet, which can be seen as a comment on the conditions behind the global textile production industry and its trading relationships in both a historical and contemporary context. It also deals with the connection to the development of women’s rights. Weaving and textile work has historically been carried out mainly by women, while men have benefitted from it. In the present, women are suffering under harsh working conditions, while international textile companies, usually led by men, reap the rewards. On the one hand, this piece is a critique of patriarchal power structures, and on the other, it is a tribute to the strength of women.
+            Jan Kuck is a Berlin-based artist. His conceptual art is characterised by his varied use of light. “ARACHNE” was exhibited as part of the Venice Biennale in 2016.
+            </p></div></div>
             
-
-            </ul>
-
+            <div class="grid_124">
+                <div class="program_knap">
+                    <a href="listeview.astro"> 
+                        <img src="../../src/imgs/back_btn.svg" alt="backknap">
+                    
+                 
+                        
+                        <h1 class="program_knap_text">GO BACK</h1>
+                    </a>
+                  
+                </div>
+                <div class="program_knap">
+                    <a href="listeview.astro"> 
+                        <h1 class="program_knap_text">ARTISTS SITE</h1>
+                   
+                        <img src="../../src/imgs/forward_btn.svg" alt="artistknap">
+                    </a>
+                </div>
         </div>
-       
-    </nav>
+            
+          
+        
+    <div class="grid_12">
+        <img src="../../src/imgs/asset@400x.png" alt="img1">
 
-
-    <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.logo img {
-  width: 80px;
-  height: 80px;
-}
-.logo{
-display: inline-block;
-  width: 600px;
-}
-nav {
-
-    display: flex;
-   
-    justify-content: flex-end;
-   
-    align-items: center;
-   padding: 3%;
-}
-
-#burger-menu {
-    cursor: pointer;
-}
-
-#menu ul {
-    list-style: none;
-   display: flex;
     
+        <img src="../../src/imgs/asset@400x.png" alt="img1">
+    </div>
+  
+</div>
+     </main>
+
+
+     <style>
+
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  img {
+  max-width: 100%;
+padding: 5%;
+  height: auto;
 }
 
-#menu li {
-    margin-right: 50px; 
-}
+.program_knap a {
 
-#menu a {
-    text-decoration: none;
-   
-}
-
-#menu a:hover {
-    color: #ff00ae; 
-}
-
-@media only screen and (max-width: 800px) {
-
+  text-decoration: none;
+display: flex;
+  align-items: center;
  
-#burger-menu {
-  cursor: pointer;
-  height: 27px; 
-  width: 27px;
-  margin: 30px;
-  overflow: visible;
-  position: absolute;
-  z-index: 2;
-  top: 0;
-  right: 0;
-}
-nav {
-
-
-padding: 0;
+ 
+  gap: 5%;
+  margin-top: 15%;
+  margin-bottom: 10%;
 }
 
-#burger-menu span {
-  display: block;
-  height: 8px;
-  opacity: 1;
-  position: absolute;
-  transition: 0.3s ease-in-out;
+.program_knap img {
+width: 40%;
+height: auto;
+  grid-column: 2;
+
 }
-#burger-menu span::before {
-  display: block;
-  height: 40px;
-  opacity: 1;
-  position: absolute;
-  transition: 0.3s ease-in-out;
+.program_knap_text {
+  grid-column: 1;
+  font-size: 170%;
 }
 
-#burger-menu span:before,
-#burger-menu span:after {
-  content: "";
+.grid_123{
+    display: grid;
+    grid-template-columns: 1fr ;
+}
+.grid_124 {
+    grid-gap: 20%;
+   
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+.grid_12{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+}
+h2{
+    font-size: 3rem;
+}
+p{
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
 }
 
-#burger-menu span:before {
-    left: 15.5px;
-    top: -16px;
-    width: 7px;
-    background: #ff00ae;
+    @media (max-width: 753px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  img {
+  max-width: 100%;
+padding: 5%;
+  height: auto;
+}
+p{
+    padding: 5%;
+}
+h2{
+    padding: 5%;
+}
+  main {
+    max-width: 100%; 
+  
+  }
+
+  .program_knap a {
+
+text-decoration: none;
+display: flex;
+align-items: center;
+
+gap: 0;
+
+margin-top: 7%;
+margin-bottom: 5%;
 }
 
-#burger-menu span {
-    right: -16px;
-    top: 3px;
-    width: 37px;
-    background: #ff00ae;
+.program_knap img {
+width: 40%;
+height: auto;
+grid-column: 2;
+
 }
+.program_knap_text {
+grid-column: 1;
+font-size: 70%;
+}
+  .grid_123 {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .grid_12 {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 
-
-
-#burger-menu.close span:before {
-    top: -16px;
-    transform: rotate(-0deg);
-    width: 8px;
-    background: rgb(0,0,0);
+  .grid_124 {
+    grid-gap: 9%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 
 
-#burger-menu.close span {
-    transform: rotate(-45deg);
-    top: 8px;
-    width: 40px;
-    background: rgb(0,0,0);
+  .knapper {
+    text-align: center; 
+    padding-top: 20px; 
+    padding-bottom: 20px;
+  }
+
+  .knapper img {
+    width: auto;
+    max-width: 100%; 
+    height: auto;
+    margin: 0 auto; 
+  }
+
+  h2 {
+    font-size: 2rem; 
+  }
 }
 
 
+    
 
-#menu {
-  z-index: 1;
-  min-width: 100%;
-  min-height: 100%;
-  position: fixed;
-  top: 0;
-  height: 0;
-  visibility: hidden;
-  opacity: 0;
-  text-align: center;
-  padding-top: 20px;
-  transition: all 0.3s ease-in-out;
-}
 
-#menu.overlay {
-  visibility: visible;
-  opacity: 1;
-  padding-top: 100px;
-  background: #ff00ae;
-}
-
-#menu ul {
-  padding: 0;
-  flex-direction: column;
-}
-
-#menu li {
-  list-style: none;
-  font-family: "GT-Haptik-Regular";
-  margin-right: 0; 
-    margin-bottom: 10px; 
-}
-
-#menu a {
-  color: #000;
-  display: block;
-  font-size: 30px;
-  margin-bottom: 30px;
-  text-decoration: none;
-}
-}
-    </style>∏
+     </style>
