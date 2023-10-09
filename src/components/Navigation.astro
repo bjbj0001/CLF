@@ -22,9 +22,9 @@ overlay.classList.toggle("overlay");
 
       <div id="menu">
           <ul>
-              <li><a class="sider" href="/listeview">Opportunities</a></li>
-              <li><a class="sider" href="/listeview">Program</a></li>
-              <li><a class="sider" href="/listeview">About us</a></li>
+              <li class="toforste"><a class="sider" href="/listeview">Opportunities</a></li>
+              <li class="toforste"><a class="sider" href="/listeview">Program</a></li>
+              <li id="sidste"><a class="sider" href="/listeview">About us</a></li>
           
 
           </ul>
@@ -47,15 +47,12 @@ height: 130px;
 }
 .logo{
 display: inline-block;
-width: 655px;
+width: 673px;
 padding: 3%;
 }
 nav {
-
   display: flex;
- 
   justify-content: flex-end;
- 
   align-items: center;
   position: absolute;
   top: 0%;
@@ -72,8 +69,12 @@ nav {
   
 }
 
-#menu li {
+.toforste {
   margin-right: 50px; 
+}
+
+ #sidste {
+  margin-right: 0px; 
 }
 
 #menu a {
