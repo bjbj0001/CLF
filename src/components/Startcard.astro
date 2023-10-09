@@ -1,17 +1,21 @@
 ---
-const header = Astro.props.header;
-const text = Astro.props.text;
-const picture = Astro.props.picture;
+//const header = Astro.props.header;
+//onst text = Astro.props.text;
+//const picture = Astro.props.picture;
+//const product = Astro.props.picture;
+const {data} = Astro.props;
+console.log(data);
 ---
-
+<a href={`exhibit/${data.slug}`}>
 <article>
   <div class="imgwrapper">
-    <img src={picture} alt="">
+    <img src={data.image} alt="">
     <div class="text-overlay">
-		<h3>{text}</p>
-      <h2>{header}</h2>
+		<h3>{data.place}</p>
+      <h2>{data.name}</h2>
     </div>
   </div>
+  </a>
 
 </article>
 

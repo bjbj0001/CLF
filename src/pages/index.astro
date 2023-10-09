@@ -18,6 +18,7 @@ const response = await fetch("https://ufxyzjtigmlykumefcgd.supabase.co/rest/v1/i
 )
 const data = await response.json();
 import { Debug } from "astro/components";
+//console.log(data);
 
 ---
         <video width="100%" height="100%" id="videoweb" width="320" height="240" autoplay muted loop>
@@ -39,7 +40,8 @@ import { Debug } from "astro/components";
   {
     data.slice(0, 5).map((product, index) => {
       return (
-        <Startcard key={index} header={product.name} text= {product.place} picture={product.image} />
+        //<Startcard slug={product.slug} key={index} header={product.name} text= {product.place} picture={product.image}   />
+        <Startcard data={product} key={index} />
       );
     })
   }

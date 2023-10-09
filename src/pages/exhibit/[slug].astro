@@ -1,76 +1,64 @@
 ---
-const {data} = Astro.props;
+import Mainlayout from "../../layout/Mainlayout.astro";
+import Singelview from "../../components/Singelview.astro";
+export async function getStaticPaths() {
+  const data = await fetch(
+    "https://ufxyzjtigmlykumefcgd.supabase.co/rest/v1/info_clf", {
+	method: "GET",
+	headers: {
+	apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVmeHl6anRpZ21seWt1bWVmY2dkIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTYyNDk1MzgsImV4cCI6MjAxMTgyNTUzOH0.F3wAjQRKjGcS95jaCTSe1avoW27786oaeCRv69Qi4Aw"
+	},
+}).then(response => response.json());
+
+  return data.map((data) => {
+    return {
+      params: { slug: data.slug },
+      props: { data },
+    };
+  });
+}
+
+const { data } = Astro.props;
 console.log(data);
 ---
+<Mainlayout>
 
-<article>
-  <div class="imgwrapper">
-     <img src={`/${data.image}`} alt="">
-    <div class="text-overlay">
-		<h3>{data.place}</p>
-      <h2>{data.name}</h2>
-    </div>
-  </div>
+<main>
 
-
-</article> 
-
-        <h2> {data.artist} </h2>
-         <p> {data.text} </p>
+  <Singelview data={data} />
+      
           
+        
+     <div class="grid_124">
+                <div class="program_knap">
+                    <a href="listeview.astro"> 
+                        <img src="../../src/imgs/back_btn.svg" alt="backknap">
+                    
+                 
+                        
+                        <h1 class="program_knap_text">GO BACK</h1>
+                    </a>
+                  
+                </div>
+                <div class="program_knap">
+                    <a href="listeview.astro"> 
+                        <h1 class="program_knap_text">ARTISTS SITE</h1>
+                   
+                        <img src="../../src/imgs/forward_btn.svg" alt="artistknap">
+                    </a>
+                </div>
+        </div>
 
-<style>
-  .imgwrapper {
-    position: relative; /* Ensure the image wrapper is a positioned container */
-    height: 100%;
-  }
   
-  img {
-    height: 100%;
-    object-fit: cover;
-  }
+</div>
+     </main>
 
 
 
-  .text-overlay {
-    position: absolute; /* Position the text overlay */
-    top: 90; /* Align it to the top of the image */
-    /* left: 0; /* Align it to the left of the image */
-    /* right: 0; /* Stretch it to cover the entire width of the image */
-    bottom: 0; /* Stretch it to cover the entire height of the image */
-    color: white; /* Text color */
-    display: flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items: left;
-    padding: 20px; /* Add some padding for readability */
-  }
+</Mainlayout>
 
-  h2, h3 {
-    margin: 0; /* Remove default margin */
-   /* text-align: center; /* Center align text within the overlay */
-  }
 
-  h3 {
-	font-size: 0.8rem;
-  }
-    h2 {
-	font-size: 1.2rem;
-  }
-  @media (max-width: 753px) {
-
-    .text-overlay{
-      padding: 5px;
-    }
-h3{
-  font-size: 0.43rem;
-
-}
-h2{
-font-size: 0.6rem;
-}
-
-  }
+     <style>
 
 
 main {
