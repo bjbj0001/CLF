@@ -3,10 +3,9 @@ const header = Astro.props.header;
 const text = Astro.props.text;
 const picture = Astro.props.picture;
 ---
-
 <article>
 	<div class="imgwrapper"><img src={picture} alt=""></div>
-		<h2>{header}</h2>
+		<h2> {header} </h2>
 		<p> {text} </p>
 </article>
 
@@ -19,5 +18,9 @@ const picture = Astro.props.picture;
  
   object-fit: cover;
   
+}
+
+h2 {
+	z-index: 100;
 }
 	</style>

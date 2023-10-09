@@ -5,6 +5,20 @@ import Programover from "../components/Programover.astro";
 import Startcard from "../components/Startcard.astro";
 
 
+
+
+const response = await fetch("https://ufxyzjtigmlykumefcgd.supabase.co/rest/v1/info_clf", {
+  method: "GET",
+  headers: {
+    apikey: 
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVmeHl6anRpZ21seWt1bWVmY2dkIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTYyNDk1MzgsImV4cCI6MjAxMTgyNTUzOH0.F3wAjQRKjGcS95jaCTSe1avoW27786oaeCRv69Qi4Aw"
+  },
+}
+)
+const data = await response.json();
+import { Debug } from "astro/components";
+
+
 ---
         <video width="100%" height="100%" id="videoweb" width="320" height="240" autoplay muted loop>
             <source src="http://www.eddasolj.dk/kea2/07_web/video/lightfestival(16x9).mp4" type="video/mp4">
@@ -20,25 +34,23 @@ import Startcard from "../components/Startcard.astro";
 			<div id="for_text_div">
 				<h2 id="for_text">Copenhagen Light Festival is an annual light festival that transforms the quiet and cold winter darkness into a unique celebration of light art, lighting design and illumination in the center of Copenhagen. </h2>
 			</div>
-			
-        <div class="front">
-            <p>Video here</p>
-     
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia aut assumenda, nulla voluptas nesciunt consequuntur dignissimos eaque vero fugit sunt dolorem quia ea esse beatae sapiente, dicta quasi earum at.</p>
-            <!-- Create a grid container for your gallery -->
-               <div class="exhibits_grid">
-			<Startcard header="Hej Verden" text="Lorem ipsum" picture="/udstilling.jpeg"/>
-			<Startcard header="Hej Verden" text="Lorem ipsum" picture="/udstilling.jpeg"/>
-			<Startcard header="Hej Verden" text="Lorem ipsum" picture="/udstilling.jpeg"/>
-			<Startcard header="Hej Verden" text="Lorem ipsum" picture="/udstilling.jpeg"/>
-			<Startcard header="Hej Verden" text="Lorem ipsum" picture="/udstilling.jpeg"/>
-        </div>
-				<div id="program_knap">
-					<a href="listeview.astro"> 
-						<h1 id="program_knap_text">PROGRAM</h1>
-						<img src="../../src/imgs/forward_btn.svg" alt="programknap">
-					</a>
-				</div>
+       <div class="exhibits_grid">
+            {
+    data.map((product) => {
+      return (
+      
+			<Startcard header={product.artist}  text="Lorem ipsum" picture={product.image}/>
+       
+      )
+    })
+  }    
+  </div>
+			<div id="program_knap">
+				<a href="listeview.astro"> 
+					<h1 id="program_knap_text">PROGRAM</h1>
+					<img src="../../src/imgs/forward_btn.svg" alt="programknap">
+				</a>
+			</div>
     </main>
 </Mainlayout>
 
@@ -55,4 +67,5 @@ import Startcard from "../components/Startcard.astro";
     display: none;
   }
 }</style>
+
 
