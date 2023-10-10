@@ -1,6 +1,6 @@
 ---
 import Some from "../components/Some.astro";
-import Mainlayout from "../layout/Mainlayout.astro";
+import Mainlayoutforside from "../layout/Mainlayoutforside.astro";
 import Programover from "../components/Programover.astro";
 import Startcard from "../components/Startcard.astro";
 import Singelview from "../components/Singelview.astro";
@@ -18,17 +18,20 @@ const response = await fetch("https://ufxyzjtigmlykumefcgd.supabase.co/rest/v1/i
 )
 const data = await response.json();
 import { Debug } from "astro/components";
+import Mainlayoutforside from "../layout/Mainlayoutforside.astro";
 //console.log(data);
 
 ---
+
         <video width="100%" height="100%" id="videoweb" width="320" height="240" autoplay muted loop>
             <source src="http://www.eddasolj.dk/kea2/07_web/video/lightfestival(16x9).mp4" type="video/mp4">
         </video>
         <video width="100%" height="100%" id="videmobil" width="320" height="240" autoplay muted loop>
             <source src="http://www.eddasolj.dk/kea2/07_web/video/lightfestival (9x16).mp4" type="video/mp4">
         </video>
-<Mainlayout>
+
 <main>
+  <Mainlayoutforside>
 			<Some/>
 	
 			<Programover/>
@@ -40,8 +43,7 @@ import { Debug } from "astro/components";
   {
     data.slice(0, 5).map((product, index) => {
       return (
-        //<Startcard slug={product.slug} key={index} header={product.name} text= {product.place} picture={product.image}   />
-        <Startcard data={product} key={index} />
+        <Startcard data={product} key={index}  />
       );
     })
   }
@@ -55,7 +57,7 @@ import { Debug } from "astro/components";
       
     </main>
  
-</Mainlayout>
+</Mainlayoutforside>
 
 
 
@@ -63,12 +65,18 @@ import { Debug } from "astro/components";
 	@media (max-width: 800px) {
   #videoweb {
     display: none;
+    z-index: 1;
   }
 }
 @media (min-width: 800px) {
   #videmobil {
     display: none;
   }
+
+
+
+  
 }</style>
+
 
 
