@@ -1,52 +1,77 @@
 ---
+const {data} = Astro.props;
+console.log(data);
 ---
 
-
-<main>
-    <div class="grid_123">
-        <div class="grid_12">
-    <img src="../../src/imgs/asset@400x.png" alt="img1">
-<div>
-        <h2>Jan Kuck (DE)</h2>
-         <p>The installation consists of a glowing carpet, which can be seen as a comment on the conditions behind the global textile production industry and its trading relationships in both a historical and contemporary context. It also deals with the connection to the development of women’s rights. Weaving and textile work has historically been carried out mainly by women, while men have benefitted from it. In the present, women are suffering under harsh working conditions, while international textile companies, usually led by men, reap the rewards. On the one hand, this piece is a critique of patriarchal power structures, and on the other, it is a tribute to the strength of women.
-            Jan Kuck is a Berlin-based artist. His conceptual art is characterised by his varied use of light. “ARACHNE” was exhibited as part of the Venice Biennale in 2016.
-            </p></div></div>
-            
-            <div class="grid_124">
-                <div class="program_knap">
-                    <a href="listeview.astro"> 
-                        <img src="../../src/imgs/back_btn.svg" alt="backknap">
-                    
-                 
-                        
-                        <h1 class="program_knap_text">GO BACK</h1>
-                    </a>
-                  
-                </div>
-                <div class="program_knap">
-                    <a href="listeview.astro"> 
-                        <h1 class="program_knap_text">ARTISTS SITE</h1>
-                   
-                        <img src="../../src/imgs/forward_btn.svg" alt="artistknap">
-                    </a>
-                </div>
-        </div>
-            
-          
-        
-    <div class="grid_12">
-        <img src="../../src/imgs/asset@400x.png" alt="img1">
-
-    
-        <img src="../../src/imgs/asset@400x.png" alt="img1">
+<article class="singleview-grid">
+    <div class="imgwrapper">
+    <img src={`/${data.image}`} alt=""></img>
+      <div class="text-overlay">
+        <h3>{data.place}</h3>
+        <h2>{data.name}</h2>
+      </div>
     </div>
-  
+
+
+
+<div class="exhibit_information">
+        <h1> {data.artist} </h1>
+         <h3> {data.description} </h3>
 </div>
-     </main>
+</article>
+          
 
+<style>
+  .singleview-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10%;
+    margin-top: 40px;
+  }
 
-     <style>
+  .exhibit_information
+   {
+    position: relative; /* Ensure the image wrapper is a positioned container */
+    height: 200px;
+  }
 
+  .imgwrapper {
+    position: relative; /* Ensure the image wrapper is a positioned container */
+    height: 200px;
+  }
+  
+  img {
+    object-fit: cover;
+    width: 600px;
+  }
+
+  h2, h3 {
+    margin: 0; /* Remove default margin */
+   /* text-align: center; /* Center align text within the overlay */
+  }
+  h1 {
+	font-size: 2rem;
+  }
+  h3 {
+	font-size: 1rem;
+  margin-top: 2%;
+  }
+    h2 {
+	font-size: 1.2rem;
+  }
+  @media (max-width: 753px) {
+    .text-overlay{
+      padding: 5px;
+    }
+h3{
+  font-size: 0.43rem;
+
+}
+h2{
+font-size: 0.6rem;
+}
+
+  }
 
 main {
     max-width: 1200px;
@@ -59,132 +84,39 @@ main {
 }
 
 
-.program_knap a {
 
-  text-decoration: none;
-display: flex;
-  align-items: center;
- 
- 
-  gap: 5%;
-  margin-top: 15%;
-  margin-bottom: 10%;
+ .imgwrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
-
-.program_knap img {
-width: 40%;
-height: auto;
-  grid-column: 2;
-
-}
-.program_knap_text {
-  grid-column: 1;
-  font-size: 170%;
-}
-
-.grid_123{
-    display: grid;
-    grid-template-columns: 1fr ;
-}
-.grid_124 {
-    grid-gap: 20%;
-   
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.text-overlay {
+    position: absolute; 
+    top: 90; 
+    bottom: 0; 
+    color: white; 
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: left;
+    padding: 5px;
   }
-.grid_12{
-    display: grid;
-    grid-template-columns: 1fr 1fr ;
-}
-h2{
-    font-size: 3rem;
-}
-p{
-    color: rgb(255, 255, 255);
-    font-size: 1.5rem;
+  .imgwrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
-    @media (max-width: 753px) {
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  img {
-  max-width: 100%;
-padding: 5%;
-  height: auto;
-}
-p{
-    padding: 5%;
-}
-h2{
-    padding: 5%;
-}
-  main {
-    max-width: 100%; 
-  
-  }
-
-  .program_knap a {
-
-text-decoration: none;
-display: flex;
-align-items: center;
-
-gap: 0;
-
-margin-top: 7%;
-margin-bottom: 5%;
-}
-
-.program_knap img {
-width: 40%;
-height: auto;
-grid-column: 2;
-
-}
-.program_knap_text {
-grid-column: 1;
-font-size: 70%;
-}
-  .grid_123 {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-  .grid_12 {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-
-  .grid_124 {
-    grid-gap: 9%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
-
-  .knapper {
-    text-align: center; 
-    padding-top: 20px; 
-    padding-bottom: 20px;
-  }
-
-  .knapper img {
-    width: auto;
-    max-width: 100%; 
-    height: auto;
-    margin: 0 auto; 
-  }
-
-  h2 {
-    font-size: 2rem; 
-  }
+.imgwrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Fill the entire imgwrapper while maintaining aspect ratio */
+  object-position: center; /* Center the image within the imgwrapper */
 }
 
 
-    
 
 
      </style>

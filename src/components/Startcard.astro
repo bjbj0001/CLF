@@ -1,72 +1,85 @@
 ---
-const header = Astro.props.header;
-const text = Astro.props.text;
-const picture = Astro.props.picture;
+//const header = Astro.props.header;
+//onst text = Astro.props.text;
+//const picture = Astro.props.picture;
+//const product = Astro.props.picture;
+const {data} = Astro.props;
+console.log(data);
 ---
-
-<article>
+<article class="gallery-item">
   <div class="imgwrapper">
-    <img src={picture} alt="">
-    <div class="text-overlay">
-		<h3>{text}</p>
-      <h2>{header}</h2>
+  <a href={`exhibit/${data.slug}`}>
+      <img src={data.image} alt="">
+      <div class="text-overlay">
+        <h3>{data.place}</h3>
+        <h2>{data.name}</h2>
+      </div>
     </div>
-  </div>
-
+  </a>
 </article>
 
+
 <style>
-  .imgwrapper {
-    position: relative; /* Ensure the image wrapper is a positioned container */
-    height: 100%;
-  }
-  
-  img {
-    height: 100%;
-    object-fit: cover;
-  }
 
+.gallery-item {
+  display: grid;
+  grid-template-columns: 1fr; /* First item fills 1fr in column */
+  grid-template-rows: 1fr; /* First item fills 1fr in row */
+  gap: 0; /* No gap between items */
+  position: relative; /* For positioning child elements */
+}
 
+.imgwrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
 
-  .text-overlay {
-    position: absolute; /* Position the text overlay */
-    top: 90; /* Align it to the top of the image */
-    /* left: 0; /* Align it to the left of the image */
-    /* right: 0; /* Stretch it to cover the entire width of the image */
-    bottom: 0; /* Stretch it to cover the entire height of the image */
-    color: white; /* Text color */
+.imgwrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Fill the entire imgwrapper while maintaining aspect ratio */
+  object-position: center; /* Center the image within the imgwrapper */
+}
+
+h2, h3 {
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+h3 {
+  font-size: 0.8rem;
+}
+
+/* For the second item */
+.gallery-item:nth-child(2) {
+  grid-template-columns: 2fr;
+}
+
+/* For the third item */
+.gallery-item:nth-child(3) {
+  grid-template-rows: 2fr;
+}
+
+.gallery-item:nth-child(6) {
+  grid-template-rows: 2fr;
+}
+
+ .text-overlay {
+    position: absolute; 
+    top: 90; 
+    bottom: 0; 
+    color: white; 
     display: flex;
     flex-direction: column;
     justify-content:center;
     align-items: left;
-    padding: 20px; /* Add some padding for readability */
-  }
-
-  h2, h3 {
-    margin: 0; /* Remove default margin */
-   /* text-align: center; /* Center align text within the overlay */
-  }
-
-  h3 {
-	font-size: 0.8rem;
-  }
-    h2 {
-	font-size: 1.2rem;
-  }
-  @media (max-width: 753px) {
-
-    .text-overlay{
-      padding: 5px;
-    }
-h3{
-  font-size: 0.43rem;
-
-}
-h2{
-font-size: 0.6rem;
-}
-
+    padding: 5px;
   }
 
   
+
 </style>

@@ -1,0 +1,344 @@
+---
+import Mainlayout from "../../layout/Mainlayout.astro";
+import Singelview from "../../components/Singelview.astro";
+export async function getStaticPaths() {
+  const data = await fetch(
+    "https://ufxyzjtigmlykumefcgd.supabase.co/rest/v1/info_clf", {
+	method: "GET",
+	headers: {
+	apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVmeHl6anRpZ21seWt1bWVmY2dkIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTYyNDk1MzgsImV4cCI6MjAxMTgyNTUzOH0.F3wAjQRKjGcS95jaCTSe1avoW27786oaeCRv69Qi4Aw"
+	},
+}).then(response => response.json());
+
+  return data.map((data) => {
+    return {
+      params: { slug: data.slug },
+      props: { data },
+    };
+  });
+}
+
+const { data } = Astro.props;
+console.log(data);
+---
+<Mainlayout>
+
+<main>
+  <Singelview data={data} />
+
+
+      <div class="grid_124">
+                <div class="program_knap">
+                    <a href="../listeview"> 
+                        <img src="../../public/back_btn.svg" alt="backknap">
+                    
+                 
+                        
+                        <h1 class="program_knap_text">GO BACK</h1>
+                    </a>
+                  
+                </div>
+                <div class="program_knap">
+                    <a href={data.link}> 
+                        <h1 class="program_knap_text">ARTISTS SITE</h1>
+                   
+                        <img src="../../public/forward_btn.svg" alt="artistknap">
+                    </a>
+                </div>
+        </div>
+
+  
+</div>
+
+  <div class="map-video">
+   <img src={`/${data.map}`} alt=""></img>
+   <img src={`/${data.video}`} alt=""></img>
+   </div>
+          
+     </main>
+
+
+
+</Mainlayout>
+
+
+     <style>
+
+
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  img {
+  max-width: 100%;
+}
+
+
+.program_knap a {
+
+  text-decoration: none;
+display: flex;
+  align-items: center;
+ 
+ 
+  gap: 5%;
+  margin-top: 15%;
+  margin-bottom: 10%;
+}
+
+.program_knap img {
+width: 40%;
+height: auto;
+  grid-column: 2;
+
+}
+.program_knap_text {
+  grid-column: 1;
+  font-size: 170%;
+}
+
+.grid_123{
+    display: grid;
+    grid-template-columns: 1fr ;
+}
+.grid_124 {
+    grid-gap: 20%;
+   
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+.grid_12{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+}
+h2{
+    font-size: 3rem;
+}
+p{
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+}
+
+    @media (max-width: 753px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  img {
+  max-width: 100%;
+padding: 5%;
+  height: auto;
+}
+p{
+    padding: 5%;
+}
+h2{
+    padding: 5%;
+}
+  main {
+    max-width: 100%; 
+  
+  }
+
+  .program_knap a {
+
+text-decoration: none;
+display: flex;
+align-items: center;
+
+gap: 0;
+
+margin-top: 7%;
+margin-bottom: 5%;
+}
+
+.program_knap img {
+width: 40%;
+height: auto;
+grid-column: 2;
+
+}
+.program_knap_text {
+grid-column: 1;
+font-size: 70%;
+}
+  .grid_123 {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .grid_12 {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .grid_124 {
+    grid-gap: 9%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+
+  .knapper {
+    text-align: center; 
+    padding-top: 20px; 
+    padding-bottom: 20px;
+  }
+
+  .knapper img {
+    width: auto;
+    max-width: 100%; 
+    height: auto;
+    margin: 0 auto; 
+  }
+
+  h2 {
+    font-size: 2rem; 
+  }
+}
+
+.singleview_grid {
+  display: grid; 
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+  margin-top: 200px;
+
+}
+.singleview_grid img{
+  width: 300px;
+  height: max-content;
+
+}
+
+
+
+
+
+/* KNAPPER */
+.program_knap a {
+
+  text-decoration: none;
+display: flex;
+  align-items: center;
+ 
+ 
+  gap: 5%;
+  margin-top: 15%;
+  margin-bottom: 10%;
+}
+
+.program_knap img {
+width: 40%;
+height: auto;
+  grid-column: 2;
+
+}
+.program_knap_text {
+  grid-column: 1;
+  font-size: 170%;
+}
+
+.grid_123{
+    display: grid;
+    grid-template-columns: 1fr ;
+}
+.grid_124 {
+    grid-gap: 20%;
+   
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+.grid_12{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+}
+    @media (max-width: 753px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+p{
+    padding: 5%;
+}
+h2{
+    padding: 5%;
+}
+  main {
+    max-width: 100%; 
+  
+  }
+
+  .program_knap a {
+
+text-decoration: none;
+display: flex;
+align-items: center;
+
+gap: 0;
+
+margin-top: 7%;
+margin-bottom: 5%;
+}
+
+.program_knap img {
+width: 40%;
+height: auto;
+grid-column: 2;
+
+}
+.program_knap_text {
+grid-column: 1;
+font-size: 70%;
+}
+  .grid_123 {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .grid_12 {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .grid_124 {
+    grid-gap: 9%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+
+  .knapper {
+    text-align: center; 
+    padding-top: 20px; 
+    padding-bottom: 20px;
+  }
+
+  .knapper img {
+    width: auto;
+    max-width: 100%; 
+    height: auto;
+    margin: 0 auto; 
+  }
+
+  h2 {
+    font-size: 2rem; 
+  }
+}
+
+.map-video {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10%;
+  margin-top: 10%;
+  align-items: center;
+}
+
+.map-video img {
+  height: 400px;
+}
+
+     </style>

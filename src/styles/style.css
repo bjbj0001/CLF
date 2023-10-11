@@ -39,6 +39,13 @@ h3 {
   font-size: 2cqw;
   color: white;
 }
+p {
+  font-family: "transducer", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+  color: white;
+}
 
 #menu li a {
   font-family: "transducer-extended", sans-serif;
@@ -61,6 +68,22 @@ h3 {
 }
 
 /**FORSIDE PLACEMENT**/
+
+/**SOME PLACEMENT**/
+#some_grid {
+  position: fixed;
+  right: 2%;
+  top: 67%;
+  z-index: 1000;
+}
+@media (max-width: 700px) {
+  #some_grid {
+    position: fixed;
+    right: 2%;
+  }
+}
+
+/***PROGRAM PÅ FORSIDEN ***/
 
 .exhibits_grid {
   margin: 6.5%;
@@ -93,36 +116,23 @@ h3 {
 .exhibits_grid article:nth-child(7) {
   grid-column: span 2;
 }
-.exhibits_grid article:nth-child(8) {
+.exhibits_grid article:nth-child(6) {
   grid-row: span 2;
 }
-.exhibits_grid article:nth-child(9) {
+.exhibits_grid article:nth-child(10) {
   grid-column: span 2;
 }
 
-/**SOME PLACEMENT**/
-#some_grid {
-  position: fixed;
-  right: 2%;
-  top: 67%;
-  z-index: 1000;
-}
-@media (max-width: 700px) {
-  #some_grid {
-    position: fixed;
-    right: 2%;
-    top: 75%;
-  }
-}
-
-/***PROGRAM PÅ FORSIDEN ***/
 /***PROGRAM OVER OBS TOM***/
 .program {
   margin-top: 7%;
+<<<<<<< HEAD
   z-index: 1002;
   font-family: "transducer-extended", sans-serif;
   font-weight: 900;
   font-style: normal;
+=======
+>>>>>>> mapping-vol-milljon-bjarney
 }
 /****PROGRAM TEXT*****/
 #for_text_div {
@@ -139,9 +149,7 @@ h3 {
   #for_text_div {
     display: flex;
     justify-content: center;
-    margin-top: 3%;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-top: 1%;
   }
 
   #for_text {
@@ -167,15 +175,4 @@ h3 {
 }
 #program_knap_text {
   grid-column: 1;
-}
-
-/***LISTE VIEW PROGRAM OVER******/
-.luft {
-  height: 100px;
-}
-
-@media (max-width: 700px) {
-  .luft {
-    height: 80px;
-  }
 }
