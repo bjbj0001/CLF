@@ -74,7 +74,7 @@ p {
   position: fixed;
   right: 2%;
   top: 67%;
-  z-index: 1000;
+  z-index: 100;
 }
 @media (max-width: 700px) {
   #some_grid {
@@ -164,8 +164,10 @@ p {
   animation: program 40s linear infinite;
 }
 
-.gul {
-  color: #cec82b;
+@media (max-width: 800px) {
+  .luft {
+    height: 60px;
+  }
 }
 
 @keyframes program {
@@ -218,4 +220,15 @@ p {
 }
 #program_knap_text {
   grid-column: 1;
+}
+
+/**TEXT OVERLAY***/
+@media (max-width: 700px) {
+  .exhibits_grid article h2 {
+    font-size: 0.8rem;
+  }
+
+  .exhibits_grid article h3 {
+    font-size: 0.4rem;
+  }
 }
