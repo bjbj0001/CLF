@@ -120,6 +120,9 @@ h3 {
 .program {
   margin-top: 7%;
   z-index: 1002;
+  font-family: "transducer-extended", sans-serif;
+  font-weight: 900;
+  font-style: normal;
 }
 /****PROGRAM TEXT*****/
 #for_text_div {
