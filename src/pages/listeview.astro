@@ -1,11 +1,8 @@
 ---
 import Some from "../components/Some.astro";
-import Mainlayout from "../layout/Mainlayoutforside.astro";
+import Mainlayout from "../layout/Mainlayout.astro";
 import Programover from "../components/Programover.astro";
-import Startcard from "../components/Startcard.astro";
-
-
-
+import Programcard from "../components/Startcard.astro";
 
 
 const response = await fetch("https://ufxyzjtigmlykumefcgd.supabase.co/rest/v1/info_clf", {
@@ -18,71 +15,33 @@ const response = await fetch("https://ufxyzjtigmlykumefcgd.supabase.co/rest/v1/i
 )
 const data = await response.json();
 import { Debug } from "astro/components";
-import Mainlayoutforside from "../layout/Mainlayoutforside.astro";
-//console.log(data);
+
 
 ---
-
-        <video width="100%" height="100%" id="videoweb" width="320" height="240" autoplay muted loop>
-            <source src="http://www.eddasolj.dk/kea2/07_web/video/lightfestival(16x9).mp4" type="video/mp4">
-        </video>
-        <video width="100%" height="100%" id="videmobil" width="320" height="240" autoplay muted loop>
-            <source src="http://www.eddasolj.dk/kea2/07_web/video/lightfestival (9x16).mp4" type="video/mp4">
-        </video>
-
-<main>
-  <Mainlayoutforside>
-			<Some/>
-	
-	 <div class="program">
-        <div class="track">
-            <p> &nbsp; PROGRAM &nbsp; PROGRAM &nbsp; PROGRAM &nbsp; PROGRAM &nbsp; PROGRAM &nbsp; PROGRAM&nbsp;
-                PROGRAM &nbsp; PROGRAM &nbsp; PROGRAM
-            </p>
-        </div>
-    </div>
-			<div id="for_text_div">
-				<h2 id="for_text">Copenhagen Light Festival is an annual light festival that transforms the quiet and cold winter darkness into a unique celebration of light art, lighting design and illumination in the center of Copenhagen. </h2>
-			</div>
-
-     <div class="exhibits_grid">
-  {
-    data.slice(0, 5).map((product, index) => {
-      return (
-        <Startcard data={product} key={index}  />
-      );
-    })
-  }
-</div>
-			<div id="program_knap">
-				<a href="/listeview"> 
-					<h1 id="program_knap_text">PROGRAM</h1>
-					<img src="/forward_btn.svg" alt="programknap">
-				</a>
-			</div>
-      
-    </main>
  
-</Mainlayoutforside>
+<Mainlayout>
+<main>
+			<Some/>
+<div class="luft"></div>
+<div class="program">
+<div class="track_2">
+<p> &nbsp; PROGRAM &nbsp; 02.02-25.02 &nbsp; PROGRAM &nbsp; 02.02-25.02 &nbsp; PROGRAM &nbsp; 02.02-25.02 &nbsp; PROGRAM &nbsp; 02.02-25.02 &nbsp; PROGRAM &nbsp;  </p>
 
-
-
-	<style>
-	@media (max-width: 800px) {
-  #videoweb {
-    display: none;
-    z-index: 1;
-  }
-}
-@media (min-width: 800px) {
-  #videmobil {
-    display: none;
-  }
-
-
-
-  
-}</style>
-
+ </div>
+ </div>
+       <div class="exhibits_grid">
+            {
+    data.map((data) => {
+      return (
+      
+			 <Programcard data={data} />
+       
+      )
+    })
+  }    
+  </div>
+		
+    </main>
+</Mainlayout>
 
 
