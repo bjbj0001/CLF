@@ -1,0 +1,81 @@
+---
+const {data} = Astro.props;
+console.log(data);
+---
+<article class="gallery-item">
+  <div class="imgwrapper">
+  <a href={`exhibit/${data.slug}`}>
+      <img src={/data.image} alt="">
+      <div class="text-overlay">
+        <h3>{data.place}</h3>
+        <h2>{data.name}</h2>
+      </div>
+    </div>
+  </a>
+</article>
+
+
+<style>
+
+.gallery-item {
+  display: grid;
+  grid-template-columns: 1fr; /* First item fills 1fr in column */
+  grid-template-rows: 1fr; /* First item fills 1fr in row */
+  gap: 0; /* No gap between items */
+  position: relative; /* For positioning child elements */
+}
+
+.imgwrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.imgwrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Fill the entire imgwrapper while maintaining aspect ratio */
+  object-position: center; /* Center the image within the imgwrapper */
+}
+
+h2, h3 {
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+h3 {
+  font-size: 0.8rem;
+}
+
+/* For the second item */
+.gallery-item:nth-child(2) {
+  grid-template-columns: 2fr;
+}
+
+/* For the third item */
+.gallery-item:nth-child(3) {
+  grid-template-rows: 2fr;
+}
+
+.gallery-item:nth-child(6) {
+  grid-template-rows: 2fr;
+}
+
+ .text-overlay {
+    position: absolute; 
+    top: 90; 
+    bottom: 0; 
+    color: white; 
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: left;
+    padding: 5px;
+  }
+
+  
+
+</style>
